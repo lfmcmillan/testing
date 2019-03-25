@@ -14,6 +14,7 @@ cluster_binary_rows <- function(Y, R, maxiter=100, tol=1e-4) {
         prev_pi_hat <- pi_hat
         prev_theta_hat <- theta_hat
         
+        ## Added a comment there
         z_hat_raw <- sapply(1:R, function(r) {
             sapply(1:N, function(i) {
                 pi_hat[r]*prod(theta_hat[r,]^Y[i,]*(1-theta_hat[r,])^(1-Y[i,]))
@@ -23,7 +24,8 @@ cluster_binary_rows <- function(Y, R, maxiter=100, tol=1e-4) {
         
         print("z_hat")
         print(z_hat)
-
+        
+        ## Added comments everywhere!!
         theta_hat <- t(z_hat)%*%Y/colSums(z_hat)
         print("theta_hat")
         print(theta_hat)
