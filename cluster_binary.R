@@ -1,11 +1,12 @@
 cluster_binary_rows <- function(Y, R, maxiter=100, tol=1e-4) {
-
+    
     N <- nrow(Y)
     M <- ncol(Y)
     
     pi_hat <- rDirichlet(R,rep(1,times=R))
     theta_hat <- matrix(runif(R*M),nrow=R)
     
+    ## Added a comment here
     iter <- 1
     diff <- 1
     while (iter <= maxiter & diff > tol) {
