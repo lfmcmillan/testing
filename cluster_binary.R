@@ -57,6 +57,7 @@ cluster_binary_rows <- function(Y, R, maxiter=100, tol=1e-4) {
     list(pi_hat=pi_hat, theta_hat=theta_hat, z_hat=z_hat, iter=iter-1)
 }
 
+# added a few more comments, for good measure
 rDirichlet <- function(ndraw, alphvec){
     ## See Wikipedia on the Dirichlet distribution for confirmation:
     gamdraw <- rgamma(ndraw, shape=alphvec, rate=1)
