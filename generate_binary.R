@@ -3,16 +3,7 @@ library(clustglm)
 
 construct_row_membership <- function(N,pi_r) {
     R <- length(pi_r)
-    if (R == 1) row_membership <- rep(1,times=N)
-    else {
-        row_membership <- vector()
-        for (rr in 1:(R-1)) {
-            row_membership <- c(row_membership,rep(rr,round(N*pi_r[rr])))
-        }
-        remaining <- N - length(row_membership)
-        row_membership <- c(row_membership, rep(R,remaining))
-    }
-    row_membership
+    return(sample(1:R, N, prob=pi_R))
 }
 
 construct_col_membership <- function(M,kappa_c) {
