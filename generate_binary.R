@@ -1,6 +1,9 @@
 library(clustglm)
 # source("/am/miro/home/mcmilllo/Marsden/BinaryNegCorr/clustglm_LMedit.R")
 
+
+## Added a load of extra comments here -----------------------------------------------------
+## These are dummy comments, not actually part of the proper code --------------------------
 construct_row_membership <- function(N,pi_r) {
     R <- length(pi_r)
     if (R == 1) row_membership <- rep(1,times=N)
